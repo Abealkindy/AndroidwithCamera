@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="30dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/frame_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/linear_biasa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/button_another"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Open from another app"
+                android:textIsSelectable="true" />
+
+            <Button
+                android:id="@+id/button_open_camera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Open camera"
+                android:textIsSelectable="true" />
+
+            <Button
+                android:id="@+id/button_open_scan_barcode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Open barcode"
+                android:textIsSelectable="true" />
+
+            <Button
+                android:id="@+id/button_open_scan_barcode_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Open barcode fragment"
+                android:textIsSelectable="true" />
+
+            <LinearLayout
+                android:id="@+id/layout_camera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <TextureView
+                    android:id="@+id/frame_camera"
+                    android:layout_width="match_parent"
+                    android:layout_height="450dp" />
+
+                <ImageView
+                    android:id="@+id/image_preview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:id="@+id/button_take_picture"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Take photo" />
+
+                <Button
+                    android:id="@+id/button_take_front"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Take Depan" />
+
+                <Button
+                    android:id="@+id/button_take_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Take Belakang" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
