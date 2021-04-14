@@ -3,4 +3,7 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="colorMask">#60000000</color>
+    <color name="zxing_result_view">#b0000000</color>
+    <color name="zxing_transparent">#00000000</color>
 </resources>

@@ -1,8 +1,10 @@
 package com.otongsutardjoe.androidwithcamera;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 
+import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 
 import android.util.Log;
@@ -29,6 +31,7 @@ public class ScanBarcodeFragment extends Fragment {
         // Required empty public constructor
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -38,6 +41,8 @@ public class ScanBarcodeFragment extends Fragment {
         IntentIntegrator integrator = IntentIntegrator.forSupportFragment(this);
         barcodeView.initializeFromIntent(integrator.createScanIntent());
         barcodeView.decodeContinuous(callback);
+        barcodeView.getViewFinder().setLaserVisibility(false);
+        barcodeView.getViewFinder().setMaskColor(getActivity().getColor(R.color.zxing_transparent));
         barcodeView.setStatusText(null);
         return view;
     }
